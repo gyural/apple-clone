@@ -45,6 +45,9 @@ const showSearch = () =>{
   seacrhDelayEls.forEach((el, idx)=>{
     el.style.transitionDelay = idx * .4 / seacrhDelayEls.length + 's'
   })
+  setTimeout(()=>{
+    searchInputEl.focus()
+  }, 600)
 }
 const hideSearch = () =>{
   headerEl.classList.remove('searching')
@@ -55,6 +58,7 @@ const hideSearch = () =>{
   seacrhDelayEls.forEach((el, idx)=>{
     el.style.transitionDelay = idx * .4 / seacrhDelayEls.length + 's'
   })
+  searchInputEl.value=''
 }
 searchStarterEl.addEventListener('click', showSearch)
 searchCloserEl.addEventListener('click', hideSearch)
