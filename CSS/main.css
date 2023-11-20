@@ -167,6 +167,35 @@ a.link::after{
   margin-top: 44px;
   font-size: 19.5px;
 }
+
+/* White Box*/
+.whitebox{
+  max-width: 1386px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+}
+.whitebox.whitebox--transparent{
+  background-color: transparent;
+}
+.whitebox .icon{
+  margin-bottom: 20px;
+}
+.whitebox h1{
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.whitebox p{
+  margin-top: 20px;
+  font-size: 19px;
+}
+.whitebox a.link{
+  display: block;
+  margin-top: 26px;
+}
 /* Header */
 header{
   --header-height: 44px;
@@ -937,7 +966,37 @@ nav .menu li.active:hover a{
   margin-top: 20px;
 }
 .accessibility figure{
-  transform: translate(470px, -620px);
+  transform: translate(470px, -641px);
+}
+/* AR */
+.ar{
+  background-color: var(--color-section);
+  padding: 20px 20px 0;
+}
+.ar .whitebox{
+  padding-bottom: 0;
+}
+.ar .inner{
+  display: flex;
+}
+
+.ar .inner > div{
+  max-width: 410px;
+  margin-top: 60px;
+  margin-right: 90px;
+}
+/* Environment */
+.environment{
+  padding: 20px 20px 0;
+  background-color: var(--color-section);
+  text-align: center;
+}
+.environment .icon{
+  margin-left: auto;
+  margin-right: auto;
+}
+.environment h1{
+  color: #03A10E;
 }
 @keyframes sprite-icon {
   /* 1~10 */
