@@ -1,3 +1,4 @@
+import ipads from '../data/ipads.js'
 // 장바구니!
 const basketStarterEl = document.querySelector('header .basket-starter')
 const basketEl = basketStarterEl.querySelector('.basket')
@@ -94,3 +95,33 @@ pauseBtn.addEventListener('click', function(){
   playBtn.classList.remove('hide')
 
 })
+
+// 당신에게 맞는 iPad/는??
+const itemsEl = document.querySelector('section.compare .items')
+ipads.forEach((iPad)=>{
+  const itemEl = document.createElement('div')
+  itemEl.classList.add('item');
+
+  let colorList = ''
+  iPad.colors.forEach((color)=>{
+    colorList += /*html*/`<li style="background-color: ${color}"></li>`
+  })
+  itemEl.innerHTML = /*html*/`
+    <div class=thumbnail>
+      <img src="${iPad.thumbnail}" alt="${iPad.name}">
+    </div>
+    <ul class="colors">
+      ${colorList}
+    </ul>
+    <h3 class="name">${iPad.name}</h3>
+    <p class="tagline">${iPad.tagline}</p>
+    <p class="price">₩${iPad.price.toLocaleString('en-US')}</p>
+    <button class="btn">구입하기</button>
+    <a href="${iPad.url}" class="link">더 알아보기</a>
+  `
+  
+  itemsEl.append(itemEl)
+})
+
+// <p class="price">₩${iPad.price.toLocaleString('en-US')}</p>
+ 
