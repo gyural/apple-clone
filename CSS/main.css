@@ -38,6 +38,11 @@ img{
 p{
   line-height: 1.6;
 }
+sup{
+  margin-right: 6px;
+  font-size: .7em;
+  vertical-align: top;
+}
 /* Inner */
 .inner{
   max-width: 980px;
@@ -486,6 +491,11 @@ nav .menu li.active a{
 }
 nav .menu li.active:hover a{
   color: var(--color-font);
+}
+
+/* Main */
+main{
+  overflow-x: hidden;
 }
 
 /* Hero */
@@ -1109,6 +1119,140 @@ footer .buy-info p{
 footer .buy-info a.link{
   font-size: 14px;
 }
+/* Foooter / warning */
+footer .warning{
+  padding: 18px 0 10px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+footer .warning ol{
+  list-style: decimal;
+  padding-left: 16px;
+}
+footer .warning li{
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-font-darkgrey);
+}
+
+footer .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+footer .breadcrumbs a{
+  font-size: 12px;
+  color: var(--color-font-darkgrey);
+  position: relative;
+}
+footer .breadcrumbs a.apple-logo{
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/path_apple.svg");
+}
+
+footer .breadcrumbs a:hover{
+  text-decoration: underline;
+}
+footer .breadcrumbs a:after{
+  content: "";
+  width: 8px;
+  height: 18px;
+  background-image: url("../images/path_div.svg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -10px;
+  right: -18px;
+  margin: auto;
+}
+footer .breadcrumbs a:last-child:after{
+  display: none;
+}
+
+/* Footer / Navigations */
+footer .navigations{
+  margin-bottom: 40px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+footer .navigations .map{
+  margin-top: 24px;
+}
+footer .navigations .map:nth-child(6){
+  padding-bottom: 100px;
+}
+footer .navigations .map h3{
+  font-size: 12px;
+  font-weight: 600;
+}
+footer .navigations .map li{
+  margin-top: 12px;
+  font-size: 12px;
+}
+footer .navigations .map li a{
+  color: var(--color-font-darkgrey);
+}
+
+footer .navigations .map li a:hover{
+  text-decoration: underline;
+}
+footer .how-to-shop{
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-font-darkgrey)
+} 
+footer .how-to-shop a{
+  color: var(--color-link)
+}
+
+footer .how-to-shop a:hover{
+  text-decoration: underline;
+}
+
+footer .legal{
+  margin-top: 10px;
+  padding: 10px 0 40px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 50px;
+  font-size: 12px;
+  color: var(--color-font-darkgrey)
+
+}
+footer .legal ul{
+  flex-grow: 1;
+  display: flex;
+  gap: 21px;
+}
+
+footer .legal ul li{
+  position: relative;
+
+}
+
+
+footer .legal ul li::after{
+  content: "|";
+  position: absolute;
+  right: -11px;
+  color: var(var(--color-border));
+}
+
+footer .legal ul li:last-child:after{
+
+}
+footer .legal ul li:hover a{
+  text-decoration: underline;
+}
+
 @keyframes sprite-icon {
   /* 1~10 */
   0.00% { background-position: 0 0; }
