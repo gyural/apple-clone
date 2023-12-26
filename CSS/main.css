@@ -225,7 +225,9 @@ header ul.menu > li{
   position: relative;
   transition: .4s;
 }
-
+header ul.menu > li.menu-starter{
+  display: none;
+}
 header ul.menu > li > a{
   padding : 0 10px;
   font-size: 11px;
@@ -450,6 +452,74 @@ header.searching .search .autocompletes li{
   transition-delay: .2s;
 }
 
+@media (max-width: 1000px){
+  header .inner{
+    padding: 0 10px;
+  }
+}
+@media (max-width: 740px){
+  header::before{
+    content: "";
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-header);
+    transition: .4s;
+  }
+  header ul.menu > li{
+    display: none;
+  }
+  header ul.menu >li.apple-logo,
+  header ul.menu >li.basket-starter,
+  header ul.menu>li.menu-starter{
+    display: flex;
+  }
+  header.menuing ul.menu >li.basket-starter{
+    opacity: 0;
+    visibility: hidden;
+  }
+  header ul.menu > li.menu-starter span{
+    display: block;
+    width: 15px;
+    height: 1px;
+    background-color: var(--color-white);
+    margin-bottom: 6px;
+    transition: .4s;
+  }
+
+  header ul.menu > li.menu-starter span:last-child{
+    margin-bottom: 0px;
+    
+  }
+  header .search-wrap{
+    padding: 0 20px 14px;
+    border-bottom: 1px solid var(--color-header);
+    box-sizing: border-box;
+    top: var(--header-height);
+  }
+  header.menuing{
+    background-color: var(--color-black);
+  }
+  header.menuing::before{
+    height: 100vh;
+    background-color: var(--color-black)
+  }
+  header.menuing ul.menu>li.menu-starter span:first-child{
+    transform: translate(0, 3.5px) rotate(45deg);
+    transition: .4s;
+  }
+
+  header.menuing ul.menu>li.menu-starter span:last-child{
+    transform: translate(0, -3.5px) rotate(-45deg);
+    transition: .4s;
+  }
+  header.menuing .search-wrap{
+    visibility: visible;
+    opacity: 1;
+  }
+}
 /* Navigation */
 nav{
   background-color: rgba(255, 255, 255, .7);

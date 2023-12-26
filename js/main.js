@@ -39,8 +39,9 @@ const seacrhDelayEls = [...searchWrapEl.querySelectorAll('li')]
 
 console.log(seacrhDelayEls)
 const showSearch = () =>{
+  stopScroll()
   headerEl.classList.add('searching')
-  document.documentElement.classList.add('fixed')
+
   headerMenuEls.reverse().forEach((el, idx)=>{
     el.style.transitionDelay = idx * .4 / headerMenuEls.length + 's'
   })
@@ -52,8 +53,9 @@ const showSearch = () =>{
   }, 600)
 }
 const hideSearch = () =>{
+  playScroll()
   headerEl.classList.remove('searching')
-  document.documentElement.classList.remove('fixed')
+
   headerMenuEls.reverse().forEach((el, idx)=>{
     el.style.transitionDelay = idx * .4 / headerMenuEls.length + 's'
   })
@@ -62,9 +64,33 @@ const hideSearch = () =>{
   })
   searchInputEl.value=''
 }
+
+function playScroll(){
+  document.documentElement.classList.remove('fixed')
+  
+}
+function stopScroll(){
+  document.documentElement.classList.add('fixed')
+
+  
+}
 searchStarterEl.addEventListener('click', showSearch)
 searchCloserEl.addEventListener('click', hideSearch)
 searchShadowEl.addEventListener('click', hideSearch)
+
+
+// 헤더 메뉴 토글
+const menuStarterEl = document.querySelector('header .menu-starter')
+menuStarterEl.addEventListener('click', function(){
+  if(headerEl.classList.contains('menuing')){
+    headerEl.classList.remove('menuing')
+    playScroll()
+  }
+  else{
+    headerEl.classList.add('menuing')
+    stopScroll()
+  }
+})
 
 //요소의 가시성 관찰
 const io = new IntersectionObserver(function (entries){
