@@ -75,7 +75,11 @@ function stopScroll(){
   
 }
 searchStarterEl.addEventListener('click', showSearch)
-searchCloserEl.addEventListener('click', hideSearch)
+//텍스트 필드로의 이벤트 버블링을 막는다!!
+searchCloserEl.addEventListener('click', function(event){
+  event.stopPropagation()
+  hideSearch()
+})
 searchShadowEl.addEventListener('click', hideSearch)
 
 
@@ -84,11 +88,42 @@ const menuStarterEl = document.querySelector('header .menu-starter')
 menuStarterEl.addEventListener('click', function(){
   if(headerEl.classList.contains('menuing')){
     headerEl.classList.remove('menuing')
+    searchInputEl.value=''
     playScroll()
   }
   else{
     headerEl.classList.add('menuing')
     stopScroll()
+  }
+})
+
+// 헤더 검색!! (mobile)
+const searchTextFieldEl = document.querySelector('header .textfield')
+const searchCancelEl = document.querySelector('header .search-canceler')
+searchTextFieldEl.addEventListener('click', function(){
+  headerEl.classList.add('searching-mobile')
+  searchInputEl.focus()
+})
+searchCancelEl.addEventListener('click', ()=>{
+  headerEl.classList.remove('searching-mobile')
+})
+
+window.addEventListener('resize', function(){
+  if(window.innerWidth <= 740){
+    headerEl.classList.remove('searching')
+  }else{
+    headerEl.classList.remove('searching-mobile')
+  }
+})
+
+const navEl = document.querySelector('nav')
+const  navMenuToggleEl = navEl.querySelector('.menu-toggler')
+
+navMenuToggleEl.addEventListener('click', ()=>{
+  if(navEl.classList.contains('menuing')){
+    navEl.classList.remove('menuing')
+  }else{
+    navEl.classList.add('menuing')
   }
 })
 
