@@ -117,16 +117,31 @@ window.addEventListener('resize', function(){
 })
 
 const navEl = document.querySelector('nav')
+const navShadowEl = navEl.querySelector('.shadow')
 const  navMenuToggleEl = navEl.querySelector('.menu-toggler')
 
 navMenuToggleEl.addEventListener('click', ()=>{
   if(navEl.classList.contains('menuing')){
-    navEl.classList.remove('menuing')
+    hideMenu()
   }else{
-    navEl.classList.add('menuing')
+    showMenu()
   }
 })
 
+navEl.addEventListener('click', (event)=>{
+  event.stopPropagation()
+})
+
+navShadowEl.addEventListener('click', hideMenu)
+windows.addEventListener('click', hideMenu)
+
+function showMenu(){
+  navEl.classList.add('menuing')
+}
+
+function hideMenu(){
+  navEl.classList.remove('menuing')
+}
 //요소의 가시성 관찰
 const io = new IntersectionObserver(function (entries){
   entries.forEach(function(entry){
