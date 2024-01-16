@@ -1018,7 +1018,55 @@ main{
   transform: translate(543px, 908px);
 }
 
+@media (max-width: 1000px){
+  .power{
+    margin-top: 80px
+  }
+  .power .multiple-apps h1{
+    width: 310px;
+    height: 180px;
+  }
+  .power .multiple-apps .figures{
+    height: 503px;
+  }
+  .power .multiple-apps figure{
+    transform: translate(71px, 0)
 
+  }
+  .power .multiple-apps figure img{
+    width: 682px;
+  }
+  .power .multiple-apps figcaption{
+    transform: scale(.8) translate(532px, -58px)
+  }
+  .power .arcade{
+    margin-top: 0;
+  }
+  .power .arcade .figures{
+    height: 480px;
+  }
+  .power .arcade figure{
+    transform: translate(-182px, -6px)
+  }
+  .power .arcade figure img{
+    width: 676px;
+  }
+  .power .arcade figure figcaption{
+    transform: scale(.8) translate(316px, 528px);
+  }
+  .power .create .figrues{
+    height: 588px;
+  }
+  .power .create .figrue{
+    transform: translate(4px, -36px);
+  }
+  .power .create .figrue img{
+    width: 820px;
+  }
+  .power .create .figrue figcaption{
+    transform: scale(.8) translate(420px, 747px);
+  }
+}
 /* Display */
 .display{
   margin-top: 450px;
