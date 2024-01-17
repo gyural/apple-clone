@@ -133,7 +133,7 @@ navEl.addEventListener('click', (event)=>{
 })
 
 navShadowEl.addEventListener('click', hideMenu)
-windows.addEventListener('click', hideMenu)
+window.addEventListener('click', hideMenu)
 
 function showMenu(){
   navEl.classList.add('menuing')
