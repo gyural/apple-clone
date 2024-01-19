@@ -926,8 +926,11 @@ main{
     height: 68px;
     transform: translate(448px, 165px);
   }
-  .hero .figure{
-    transform: translate(70px, -2424px);
+  .hero .figures{
+    height: 644px;
+  }
+  .hero figure{
+    transform: translate(70px, -24px);
   }
   .hero figure img{
     width: 540px;
@@ -935,8 +938,8 @@ main{
   .hero figure figcaption .caption-camera{
     transform:  scale(.8) translate(-9px, 524px);
   }
-  .hero figure figcaption .caption.chip{
-    transform:  scale(.8) translate(510px, 422px);
+  .hero figure figcaption .caption-chip{
+    transform:  scale(.8) translate(520px, 422px);
     
   }
   .hero figure figcaption .caption-storage{
@@ -956,12 +959,10 @@ main{
     margin: 0 auto 40px;
     position: static;
     transform: none;
-
   }
   .hero .figures{
     height: auto;
     margin-bottom: 100px;
-    
   }
   .hero figure{
     transform: none;
@@ -987,10 +988,10 @@ main{
     height: 185px;
     background-image: url("../images/hero_headline_mobile.png")
   }
-  .hero h2 p.pricing{
+  .hero p.pricing{
     font-size: 20px;
   }
-  .hero h2 p.decription{
+  .hero p.decription{
     width: auto;
     font-size: 17px;
   }
@@ -1090,16 +1091,16 @@ main{
   .power .arcade figure figcaption{
     transform: scale(.8) translate(316px, 528px);
   }
-  .power .create .figrues{
+  .power .create .figures{
     height: 588px;
   }
-  .power .create .figrue{
+  .power .create figure{
     transform: translate(4px, -36px);
   }
-  .power .create .figrue img{
+  .power .create figure img{
     width: 820px;
   }
-  .power .create .figrue figcaption{
+  .power .create figure figcaption{
     transform: scale(.8) translate(420px, 747px);
   }
 }
@@ -1194,7 +1195,7 @@ main{
 
 @media (max-width: 1000px){
   .display{
-    margin-top: 380px;
+    margin-top: 140px;
   }
   .display .notes h1{
     width: 400px;
@@ -1227,12 +1228,18 @@ main{
   }
 }
 @media (max-width: 740px){
+  .display{
+    margin-top: 30px;
+  }
   .display .notes h1{
     width: 290px;
     height: 300px;
     background-image: url("../images/display_headline_mobile.png");
     transform: none;
     margin: 0 auto;
+  }
+  .display .notes .figures{
+    height: auto;
   }
   .display .notes figure{
     transform: translate(20px, 0);
@@ -1256,8 +1263,24 @@ main{
   .display .shareplay figure img{
     width: 458px;
   }
-  .display .shareplay figcaption{
-    transform: scale(.8) translate(220px, -45px);
+  .display .shareplay figure figcaption{
+    transform: scale(.8) translate(68px, 380px);
+  }
+  .display .sahreplay{
+    margin-top: 30px;
+  }
+  .display .shareplay .figures{
+    height: auto;
+    order: 1;
+  }
+  .display .shareplay figure{
+    transform: translate(20px, 0);
+  }
+  .display .shareplay figure img{
+    width: 460px;
+  }
+  .display .stage figcaption{
+    transform: scale(.8) translate(261px, 358px);
   }
 }
 /* Camera */
@@ -1337,6 +1360,99 @@ main{
   transform: translate(27px, 905px);
 }
 
+@media (max-width: 1000px){
+  .camera{
+    margin-top: 165px;
+  }
+  .camera .stage h1{
+    width: 405px;
+    height: 270px;
+    transform: translate(0, 0);
+  }
+  .camera .stage .info{
+    top: 0;
+  }
+  .camera .stage .figures{
+    height: 500px;
+  }
+  .camera .stage figure img{
+    width: 678px;
+  }
+  .camera .stage video{
+    top: 23px;
+    left: 50px;
+    transform: scale(.65);
+    transform-origin: 0 0;
+  }
+  .camera .stage .controller-play,
+  .camera .stage .controller--pause{
+    transform: translate(276px, -88px) rotate(-3deg)
+  }
+  .camera .stage figcaption{
+    transform: scale(.8) translate(-136px, 306px);
+  }
+  .camera .edit .figures{
+    height: auto;
+  }
+  .camera .edit figure{
+    transform: translate(40px, 0);
+  }
+  .camera .edit figure img{
+    width: 509px;
+  }
+  .camera .edit figcaption{
+    transform: scale(.8) translate(27px, 742px);
+  }
+}
+@media (max-width: 740px){
+  .camera{
+    margin-top: 120px;
+  }
+  .camera .stage h1{
+    width: 304px;
+    height: 350px;
+    background-image: url(../images/camera_headline_mobile.png);
+    margin: 0 auto;
+  }
+  .camera .stage .info{
+    position: static;
+    margin-top: 30px;
+  }
+  .camera .stage .figures{
+    height: auto;
+    margin-top: 64px;
+  }
+  .camera .stage figure{
+    transform: translate(20px, 0);
+  }
+  .camera .stage figure img{
+    width: 450px;
+  }
+  .camera .stage video{
+    transform: scale(.43);
+    top: 15px;
+    left: 33px;
+  }
+  .camera .stage .controller--play,
+  .camera .stage .controller--pause{
+    transform: translate(169px, -51px) rotate(-3deg);
+  }
+  .camera .stage figure figcaption{
+    width: 175px;
+    height: 43px;
+    background-image: url("../images/camera_hardware_caption_mobile.png");
+    transform: scale(1) translate(110px, -40px);
+  }
+  .camera .edit .figures{
+    margin-top: 30px;
+  }
+  .camera .edit figure img{
+    width: 343px;
+  }
+  .camera .edit figcaption{
+    transform: scale(.8) translate(27px, 502px);
+  }
+}
 /* Wireless */
 .wireless{
   margin-top: 202px;
@@ -1369,7 +1485,66 @@ main{
   background-image: url("../images/wireless_files_caption.png");
   transform: translate(96px, 639px);
 }
-
+@media (max-width: 1000px){
+  .wireless{
+    margin-top: 140px;
+  }
+  .wireless .facetime h1{
+    width: 450px;
+    height: 200px;
+    transform: translate(70px, 0);
+  }
+  .wireless .facetime figure{
+    transform: translate(0, 0);
+  }
+  .wireless .facetime figure img{
+    width: 769px;
+  }
+  .wireless .facetime figcaption{
+    transform: scale(.8) translate(670px, -60px);
+  }
+  .wireless .files figure img{
+    width: 676px;
+  }
+  .wireless .files figcaption{
+    transform: scale(.8) translate(43px, 520px);
+  }
+}
+@media (max-width: 740px){
+  .wireless{
+    margin-top: 80px;
+  }
+  .wireless .facetime h1{
+    width: 312px;
+    height: 223px;
+    background-image: url("../images/wireless_headline_mobile.png");
+    transform: none;
+    margin: 0 auto;
+  }
+  .wireless .facetime .figures{
+    height: auto;
+    margin-top: 84px;
+  }
+  .wireless .facetime figure img{
+    width: 490px;
+  }
+  .wireless .facetime figcaption{
+    transform: scale(.8) translate(120px, -45px);
+  }
+  .wireless .files .figures{
+    margin-top: 30px;
+  }
+  
+  .wireless .files figure{
+    transform: translate(20px, 0);
+  }
+  .wireless .files figure img{
+    width: 450px;
+  }
+  .wireless .files figcaption{
+    transform: scale(.8) translate(73px, 355px);
+  }
+  }
 /* Accessories */
 .accessories{
   margin-top: 195px;
@@ -1405,6 +1580,55 @@ main{
   justify-content: space-around;
 }
 
+@media(max-width: 1000px){
+  .accessories{
+    margin-top: 120px;
+  }
+  .accessories h1{
+    width: 384px;
+    height: 243px;
+  }
+  .accessories .figures{
+    height: 700px;
+  }
+  .accessories figure{
+    transform: translate(12px, 0);
+  }
+  .accessories figure img{
+    width: 712px;
+  }
+  .accessories figcaption .caption-memo{
+    transform: scale(.8) translate(677px, -60px);
+  }
+  .accessories figcaption .caption-supports{
+    transform: scale(.8) translate(101px, 595px);
+  }
+}
+@media(max-width: 740px){
+  .accessories h1{
+    width: 300px;
+    height: 190px;
+  }
+  .accessories .figures{
+    height: auto;
+    margin-top: 64px;
+  }
+  .accessories figure img{
+    width: 380px;
+  }
+  .accessories figcaption .caption-memo{
+    transform: scale(.8) translate(186px, -58px);
+  }
+  .accessories figcaption .caption-supports{
+    width: 160px;
+    height: 44px;
+    background-image: url("../images/accessories_caption_supports_mobile.png");
+    transform: scale(1) translate(31px, 335px);
+  }
+  .accessories .infos{
+    margin-top: 100px;
+  }
+}
 /* iPadOS */
 .ipados{
   margin-top: 212px;
